@@ -32,13 +32,13 @@ namespace ESFA.DC.DateTime.Provider.Tests
         [Fact]
         public void TestConvertOpaToLocalDateTime()
         {
-            //const string opaDateTime = "2018-08-01 00:00:00";
-            //System.DateTime target = new System.DateTime(2018, 8, 1);
+            const string opaDateTime = "2018-08-01 00:00:00";
+            System.DateTime target = new System.DateTime(2018, 8, 1);
 
-            //IDateTimeProvider dateTimeProvider = new DateTimeProvider();
-            //System.DateTime dateTest = dateTimeProvider.ConvertOpaToDateTime(opaDateTime);
+            IDateTimeProvider dateTimeProvider = new DateTimeProvider();
+            System.DateTime dateTest = dateTimeProvider.ConvertOpaToDateTime(opaDateTime);
 
-            //dateTest.Should().Be(target);
+            dateTest.Should().Be(target);
         }
     }
 }
