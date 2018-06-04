@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>0</Version>
+    <Authors>DC</Authors>
+    <Company>ESFA</Company>
+    <Description>Implementation of DateTime Provider and helper functions</Description>
+    <Copyright>Copyright (c) 2018</Copyright>
+    <PackageProjectUrl>https://github.com/SkillsFundingAgency/DC-DateTime-Provider</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/SkillsFundingAgency/DC-DateTime-Provider</RepositoryUrl>
+    <PackageLicenseUrl>https://github.com/SkillsFundingAgency/DC-DateTime-Provider/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageTags>ESFA DC DateTime Implementation</PackageTags>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <CodeAnalysisRuleSet>ESFA.DC.DateTime.Provider.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <CodeAnalysisRuleSet>ESFA.DC.DateTime.Provider.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.0.2">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ESFA.DC.DateTime.Provider.Interface\ESFA.DC.DateTime.Provider.Interface.csproj" />
+  </ItemGroup>
+
+</Project>
