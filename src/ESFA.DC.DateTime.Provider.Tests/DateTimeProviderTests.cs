@@ -10,35 +10,35 @@ namespace ESFA.DC.DateTime.Provider.Tests
         [Fact]
         public void TestGetNowUtc()
         {
-            //IDateTimeProvider dateTimeProvider = new DateTimeProvider();
-            //dateTimeProvider.GetNowUtc().Should().BeCloseTo(System.DateTime.UtcNow);
+            IDateTimeProvider dateTimeProvider = new DateTimeProvider();
+            dateTimeProvider.GetNowUtc().Should().BeCloseTo(System.DateTime.UtcNow);
         }
 
         [Fact]
         public void TestConvertUtcToUk()
         {
-            //System.DateTime utcNow = System.DateTime.UtcNow;
+            System.DateTime utcNow = System.DateTime.UtcNow;
 
-            //IDateTimeProvider dateTimeProvider = new DateTimeProvider();
-            //System.DateTime dateTest = dateTimeProvider.ConvertUtcToUk(utcNow);
+            IDateTimeProvider dateTimeProvider = new DateTimeProvider();
+            System.DateTime dateTest = dateTimeProvider.ConvertUtcToUk(utcNow);
 
-            //// https://stackoverflow.com/questions/4034923/how-to-represent-the-current-uk-time
-            //TimeZoneInfo britishZone = TimeZoneInfo.FindSystemTimeZoneById("GMT Standard Time");
-            //System.DateTime dateBaseline = TimeZoneInfo.ConvertTime(utcNow, TimeZoneInfo.Utc, britishZone);
+            // https://stackoverflow.com/questions/4034923/how-to-represent-the-current-uk-time
+            TimeZoneInfo britishZone = TimeZoneInfo.FindSystemTimeZoneById("GMT Standard Time");
+            System.DateTime dateBaseline = TimeZoneInfo.ConvertTime(utcNow, TimeZoneInfo.Utc, britishZone);
 
-            //dateTest.Should().Be(dateBaseline);
+            dateTest.Should().Be(dateBaseline);
         }
 
         [Fact]
         public void TestConvertOpaToLocalDateTime()
         {
-            //const string opaDateTime = "2018-08-01 00:00:00";
-            //System.DateTime target = new System.DateTime(2018, 8, 1);
+            const string opaDateTime = "2018-08-01 00:00:00";
+            System.DateTime target = new System.DateTime(2018, 8, 1);
 
-            //IDateTimeProvider dateTimeProvider = new DateTimeProvider();
-            //System.DateTime dateTest = dateTimeProvider.ConvertOpaToDateTime(opaDateTime);
+            IDateTimeProvider dateTimeProvider = new DateTimeProvider();
+            System.DateTime dateTest = dateTimeProvider.ConvertOpaToDateTime(opaDateTime);
 
-            //dateTest.Should().Be(target);
+            dateTest.Should().Be(target);
         }
     }
 }
