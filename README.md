@@ -7,5 +7,5 @@ System.DateTime GetNowUtc();
 
 System.DateTime ConvertUtcToUk(System.DateTime utcDateTime);
 
-System.DateTime ConvertOpaToLocalDateTime(string opaDateTime);
+System.DateTime ConvertOpaToDateTime(string opaDateTime);
 ```

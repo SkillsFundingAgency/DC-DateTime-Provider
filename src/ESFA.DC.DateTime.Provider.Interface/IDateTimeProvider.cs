@@ -8,6 +8,6 @@ namespace ESFA.DC.DateTime.Provider.Interface
 
         System.DateTime ConvertUtcToUk(System.DateTime utcDateTime);
 
-        System.DateTime ConvertOpaToLocalDateTime(string opaDateTime);
+        System.DateTime ConvertOpaToDateTime(string opaDateTime);
     }
 }
