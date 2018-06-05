@@ -30,6 +30,16 @@ namespace ESFA.DC.DateTime.Provider.Tests
         }
 
         [Fact]
+        public void TestConvertInvalidDateTimeToUk()
+        {
+            System.DateTime dateTime = new System.DateTime(2018, 1, 14, 12, 0, 0, DateTimeKind.Local);
+
+            IDateTimeProvider dateTimeProvider = new DateTimeProvider();
+            Action dateTimeTest = () => dateTimeProvider.ConvertUtcToUk(dateTime);
+            dateTimeTest.Should().Throw<ArgumentException>();
+        }
+
+        [Fact]
         public void TestConvertOpaToLocalDateTime()
         {
             const string opaDateTime = "2018-08-01 00:00:00";

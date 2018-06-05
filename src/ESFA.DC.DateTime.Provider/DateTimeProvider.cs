@@ -8,6 +8,8 @@ namespace ESFA.DC.DateTime.Provider
     {
         private static readonly IFormatProvider Culture = new CultureInfo("en-GB", true);
 
+        private static readonly TimeZoneInfo UkTimeZone = TimeZoneInfo.FindSystemTimeZoneById("GMT Standard Time");
+
         public System.DateTime GetNowUtc()
         {
             return System.DateTime.UtcNow;
@@ -15,7 +17,7 @@ namespace ESFA.DC.DateTime.Provider
 
         public System.DateTime ConvertUtcToUk(System.DateTime utcDateTime)
         {
-            return TimeZoneInfo.ConvertTimeFromUtc(utcDateTime, TimeZoneInfo.FindSystemTimeZoneById("GMT Standard Time"));
+            return TimeZoneInfo.ConvertTimeFromUtc(utcDateTime, UkTimeZone);
         }
 
         public System.DateTime ConvertOpaToDateTime(string opaDateTime)
