@@ -55,12 +55,12 @@ namespace ESFA.DC.DateTime.Provider.Tests
         //public void TestGetIlrFilenameAsUtc()
         //{
         //    const string ilrFilename = "ILR-10006341-1718-20171107-113456-02.xml";
-        //    System.DateTime target = new System.DateTime(2017, 11, 7, 11, 34, 56, DateTimeKind.Local);
+        //    System.DateTime target = new System.DateTime(2017, 11, 7, 11, 34, 56);
         //    TimeZoneInfo britishZone = TimeZoneInfo.FindSystemTimeZoneById("GMT Standard Time");
         //    System.DateTime dateBaseline = TimeZoneInfo.ConvertTime(target, britishZone, TimeZoneInfo.Utc);
 
         //    IDateTimeProvider dateTimeProvider = new DateTimeProvider();
-        //    System.DateTime dateTime = dateTimeProvider.GetIlrFilenameAsUtc(ilrFilename);
+        //    System.DateTime dateTime = dateTimeProvider.GetIlrFilenameDateTimeAsUtc(ilrFilename);
 
         //    dateTime.Should().Be(dateBaseline);
         //}

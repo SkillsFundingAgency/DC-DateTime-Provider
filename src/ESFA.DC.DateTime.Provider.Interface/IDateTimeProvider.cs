@@ -8,8 +8,8 @@ namespace ESFA.DC.DateTime.Provider.Interface
 
         System.DateTime ConvertUtcToUk(System.DateTime utcDateTime);
 
-        System.DateTime ConvertOpaToDateTime(string opaDateTime);
+        System.DateTime ConvertUkToUtc(string dateTime, string format = "yyyyMMdd-HHmmss");
 
-        System.DateTime GetIlrFilenameDateTimeAsUtc(string ilrFilename);
+        System.DateTime ConvertOpaToDateTime(string opaDateTime);
     }
 }

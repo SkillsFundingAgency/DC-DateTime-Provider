@@ -38,7 +38,13 @@ namespace ESFA.DC.DateTime.Provider
                 "yyyyMMdd-HHmmss",
                 CultureInfo.InvariantCulture);
 
-            return TimeZoneInfo.ConvertTimeToUtc(localDateTime, UkTimeZone);
+            System.DateTime ret = TimeZoneInfo.ConvertTimeToUtc(localDateTime, UkTimeZone);
+            if (!ret.IsDaylightSavingTime() && System.DateTime.Now.IsDaylightSavingTime())
+            {
+                ret = ret.AddHours(1);
+            }
+
+            return ret;
         }
     }
 }
