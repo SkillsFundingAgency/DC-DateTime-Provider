@@ -24,5 +24,21 @@ namespace ESFA.DC.DateTime.Provider
         {
             return Convert.ToDateTime(opaDateTime, Culture);
         }
+
+        public System.DateTime GetIlrFilenameDateTimeAsUtc(string ilrFilename)
+        {
+            string[] tokens = ilrFilename.Split('-');
+            if (tokens.Length != 6)
+            {
+                throw new ArgumentException("ILR filename should be in the format ILR-LLLLLLLL-YYYY-yyyymmdd-hhmmss-NN.XML", nameof(ilrFilename));
+            }
+
+            System.DateTime localDateTime = System.DateTime.ParseExact(
+                $"{tokens[3]}-{tokens[4]}",
+                "yyyyMMdd-HHmmss",
+                CultureInfo.InvariantCulture);
+
+            return TimeZoneInfo.ConvertTimeToUtc(localDateTime, UkTimeZone);
+        }
     }
 }
