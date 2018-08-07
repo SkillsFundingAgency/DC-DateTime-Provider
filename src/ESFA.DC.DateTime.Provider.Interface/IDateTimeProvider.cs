@@ -6,7 +6,7 @@ namespace ESFA.DC.DateTimeProvider.Interface
     {
         DateTime GetNowUtc();
 
-        DateTime ConvertUtcToUk(System.DateTime utcDateTime);
+        DateTime ConvertUtcToUk(DateTime utcDateTime);
 
         DateTime ConvertUkToUtc(string dateTime, string format = "yyyyMMdd-HHmmss");
     }

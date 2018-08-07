@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ESFA.DC.DateTime.Provider", "ESFA.DC.DateTime.Provider\ESFA.DC.DateTime.Provider.csproj", "{20D880BB-67D2-4748-8D0E-77FE0CA1224D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ESFA.DC.DateTimeProvider", "ESFA.DC.DateTime.Provider\ESFA.DC.DateTimeProvider.csproj", "{20D880BB-67D2-4748-8D0E-77FE0CA1224D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ESFA.DC.DateTimeProvider.Interface", "ESFA.DC.DateTime.Provider.Interface\ESFA.DC.DateTimeProvider.Interface.csproj", "{0ED9D130-44FE-4108-912A-773F3CDB0C07}"
 EndProject

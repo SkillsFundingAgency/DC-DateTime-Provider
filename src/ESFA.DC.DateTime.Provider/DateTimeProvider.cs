@@ -1,33 +1,26 @@
 ﻿using System;
 using System.Globalization;
-using ESFA.DC.DateTime.Provider.Interface;
+using ESFA.DC.DateTimeProvider.Interface;
 
-namespace ESFA.DC.DateTime.Provider
+namespace ESFA.DC.DateTimeProvider
 {
     public sealed class DateTimeProvider : IDateTimeProvider
     {
-        private static readonly IFormatProvider Culture = new CultureInfo("en-GB", true);
-
         private static readonly TimeZoneInfo UkTimeZone = TimeZoneInfo.FindSystemTimeZoneById("GMT Standard Time");
 
-        public System.DateTime GetNowUtc()
+        public DateTime GetNowUtc()
         {
-            return System.DateTime.UtcNow;
+            return DateTime.UtcNow;
         }
 
-        public System.DateTime ConvertUtcToUk(System.DateTime utcDateTime)
+        public DateTime ConvertUtcToUk(DateTime utcDateTime)
         {
             return TimeZoneInfo.ConvertTimeFromUtc(utcDateTime, UkTimeZone);
         }
 
-        public System.DateTime ConvertOpaToDateTime(string opaDateTime)
+        public DateTime ConvertUkToUtc(string dateTime, string format = "yyyyMMdd-HHmmss")
         {
-            return Convert.ToDateTime(opaDateTime, Culture);
-        }
-
-        public System.DateTime ConvertUkToUtc(string dateTime, string format = "yyyyMMdd-HHmmss")
-        {
-            System.DateTime localDateTime = System.DateTime.ParseExact(dateTime, format, CultureInfo.InvariantCulture);
+            DateTime localDateTime = DateTime.ParseExact(dateTime, format, CultureInfo.InvariantCulture);
             return TimeZoneInfo.ConvertTimeToUtc(localDateTime, UkTimeZone);
         }
     }
