@@ -24,7 +24,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodeAnalysisRuleSet>ESFA.DC.DateTime.Provider.Tests.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>..\ESFA.DC.DateTime.Provider.Interface\ESFA.DC.DateTime.Provider.Interface.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -33,7 +33,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodeAnalysisRuleSet>ESFA.DC.DateTime.Provider.Tests.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>..\ESFA.DC.DateTime.Provider.Interface\ESFA.DC.DateTime.Provider.Interface.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
@@ -89,9 +89,9 @@
     <Analyzer Include="..\packages\xunit.analyzers.0.7.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ESFA.DC.DateTime.Provider.Interface\ESFA.DC.DateTime.Provider.Interface.csproj">
+    <ProjectReference Include="..\ESFA.DC.DateTime.Provider.Interface\ESFA.DC.DateTimeProvider.Interface.csproj">
       <Project>{0ED9D130-44FE-4108-912A-773F3CDB0C07}</Project>
-      <Name>ESFA.DC.DateTime.Provider.Interface</Name>
+      <Name>ESFA.DC.DateTimeProvider.Interface</Name>
     </ProjectReference>
     <ProjectReference Include="..\ESFA.DC.DateTime.Provider\ESFA.DC.DateTime.Provider.csproj">
       <Project>{20D880BB-67D2-4748-8D0E-77FE0CA1224D}</Project>
