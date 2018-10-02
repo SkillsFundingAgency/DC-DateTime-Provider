@@ -18,9 +18,14 @@ namespace ESFA.DC.DateTimeProvider
             return TimeZoneInfo.ConvertTimeFromUtc(utcDateTime, UkTimeZone);
         }
 
-        public DateTime ConvertUkToUtc(string dateTime, string format = "yyyyMMdd-HHmmss")
+        public DateTime ConvertUkToUtc(DateTime ukDateTime)
         {
-            DateTime localDateTime = DateTime.ParseExact(dateTime, format, CultureInfo.InvariantCulture);
+            return TimeZoneInfo.ConvertTimeToUtc(ukDateTime, UkTimeZone);
+        }
+
+        public DateTime ConvertUkToUtc(string ukDateTime, string format = "yyyyMMdd-HHmmss")
+        {
+            DateTime localDateTime = DateTime.ParseExact(ukDateTime, format, CultureInfo.InvariantCulture);
             return TimeZoneInfo.ConvertTimeToUtc(localDateTime, UkTimeZone);
         }
     }
