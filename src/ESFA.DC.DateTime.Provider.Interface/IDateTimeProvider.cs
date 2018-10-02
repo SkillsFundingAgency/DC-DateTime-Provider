@@ -8,6 +8,8 @@ namespace ESFA.DC.DateTimeProvider.Interface
 
         DateTime ConvertUtcToUk(DateTime utcDateTime);
 
-        DateTime ConvertUkToUtc(string dateTime, string format = "yyyyMMdd-HHmmss");
+        DateTime ConvertUkToUtc(DateTime ukDateTime);
+
+        DateTime ConvertUkToUtc(string ukDateTime, string format = "yyyyMMdd-HHmmss");
     }
 }
